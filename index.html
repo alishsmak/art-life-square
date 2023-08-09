@@ -2,40 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/logo.jpg">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lignum | Мебель Для Души</title>
+    <title>Art Life Square | Площадь Художественной Жизни</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- NavBar Section -->
     <nav class="navbar">
-        <div class="navbar_container">
-            <a href="/" id="navbar_logo">Lignum</a>
-            <div class="navbar_toggle" id="mobile-menu">
+        <div class="navbar-container">
+            <a href="/" id="navbar-logo">art life square</a>
+            <div class="navbar-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar_menu">
-                <li class="navbar_item">
-                    <a href="" class="navbar_links">Портфолио</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="" class="navbar-links">Портфолио</a>
                 </li>
-                <li class="navbar_item">
-                    <a href="" class="navbar_links">О Нас</a>
+                <li class="navbar-item">
+                    <a href="" class="navbar-links">О Нас</a>
                 </li>
-                <li class="navbar_item">
-                    <a href="" class="navbar_links">Контакты</a>
+                <li class="navbar-item">
+                    <a href="" class="navbar-links">Контакты</a>
                 </li>
             </ul>
-            <a id="call" href=""><img  id="call_image" src="images/call.png" alt=""></a>
+            <!-- <a id="call" href=""><img  id="call-image" src="images/call.png" alt=""></a> -->
+            <button data-modal-target="#modal" class="modal-button"><img  id="call-image" src="images/call.png" alt=""></button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">+7 (777) 777 77 77</h2>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <a href="">WhatsApp</a>
+                    <a href="">Telegram</a>
+                </div>
+            </div>
+            <div id="overlay"></div>
         </div>
     </nav>
 
     <!-- Main Content Section -->
     <div class="main">
-        <div class="main_container">
-            <div class="main_content">
+        <div class="main-container">
+            <div class="main-content">
 
             </div>
         </div>
@@ -43,25 +56,28 @@
 
     <!-- Footer Section -->
     <div class="footer">
-        <div class="footer_container">
-            <div class="footer_row">
-                <div class="footer_logo">
-                    <h1>Lignum</h1>
-                    <p>Мебель Для Души</p>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-logo">
+                    <!-- <h1>Art Life Square</h1>
+                    <p>Площадь Художественной Жизни</p> -->
+                    <img id="footer-logo-icon" src="/images/footer_logo.jpg" alt="footer-logo-icon">
                 </div>
-                <div class="footer_links">
-                    <a href="" class="footer_link">Портфолио</a>
-                    <a href="" class="footer_link">О Нас</a>
-                    <a href="" class="footer_link">Контакты</a>
+                <div class="footer-nav-container">
+                    <div class="footer-nav">
+                        <a href="">Портфолио</a>
+                        <a href="">О Нас</a>
+                        <a href="">Контакты</a>
+                    </div>
                 </div>
-                <div class="footer_info">
+                <div class="footer-info">
                     Астана, улица Туркестан, 34Б
                     <br>
-                    Почта: <a href="">lignummebel@yandex.kz</a>
+                    Почта: <a class="link" href="">artlifesquare@yandex.kz</a>
                 </div>
             </div>
-            <div class="footer_row second">
-                <div class="watermark">© «Lignum», 2020 — 2023</div>
+            <div class="footer-row second">
+                <div class="watermark">© «art life square», 2020 — 2023</div>
             </div>
         </div>
     </div>
