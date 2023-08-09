@@ -9,6 +9,10 @@
     box-sizing: border-box
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     background: #363435;
     height: 60px;
@@ -27,7 +31,7 @@
     height: 60px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 50px;
 }
@@ -45,6 +49,11 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 1.8rem;
+}
+
+#navbar-logo-icon {
+    height: 55px;
+    padding-right: 10px;
 }
 
 .navbar-menu {
@@ -84,8 +93,8 @@
 
 .modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 60%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border: 1px solid #363435;
@@ -93,8 +102,10 @@
     z-index: 10;
     background-color: #363435;
     color: #FEFEFE;
-    width: 500px;
+    width: 380px;
+    height: 200px;
     max-width: 80%;
+    max-height: 60%;
 }
 
 .modal.active {
@@ -106,12 +117,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #272727;
+    width: 90%;
+    height: 50%;
+    margin-left: 5%;
 }
 
-.modal-header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
+.modal-title {
+    font-size: 2rem;
+    font-weight: 400;
+    /* background-color: cadetblue; */
 }
 
 .modal-header .close-button {
@@ -119,12 +134,25 @@
     border: none;
     outline: none;
     background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
+    color: #FEFEFE;
+    font-size: 2rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    align-items: flex-start;
 }
 
 .modal-body {
     padding: 10px 15px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.modal-body a {
+    text-decoration: none;
+    color: cadetblue;
+    padding: 1rem;
 }
 
 #overlay {
@@ -168,7 +196,7 @@
         top: -1000px;
         opacity: 1;
         transition: all 0.5s ease;
-        height: 50vh;
+        height: 38vh;
         z-index: -1;
     }
   
@@ -178,8 +206,11 @@
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 40vh;
-        font-size: 1.6rem;
+        height: 38vh;
+        font-size: 1.25rem;
+        align-items: baseline;
+        text-align: left;
+        float: left;
     }
   
     #navbar-logo {
@@ -261,7 +292,6 @@
 .footer-logo {
     flex: 0 0 35%;
     max-width: 35%;
-    /* background-color: cadetblue; */
 }
 
 #footer-logo-icon {
@@ -285,11 +315,12 @@
 .footer-nav a {
     color: #fff;
     float: left;
-    width: 25%;
+    width: 33.33333%;
     display: block;
-    font-size: .9rem;
+    font-size: 1.25rem;
     padding: 0 0 10px 0;
     text-decoration: underline;
+    /* background-color: cadetblue; */
 }
 
 .footer-info {
@@ -311,11 +342,15 @@
 @media screen and (max-width: 960px) {
     .footer-row {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer-logo {
         flex: content;
         max-width: fit-content;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer-nav-container {
@@ -323,13 +358,11 @@
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;
-        /* background-color: cadetblue; */
     }
 
     .footer-nav {
         float: left;
         margin: 20px 0 30px 0;
-        /* background-color: cadetblue; */
     }
 
     .footer-nav a {
