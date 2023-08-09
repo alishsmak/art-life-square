@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+    /* font-family: 'Kumbh Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 *, ::after, ::before {
@@ -20,6 +21,7 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    letter-spacing: 0.5px;
     position: relative;
     top: 0;
     z-index: 999;
@@ -75,7 +77,27 @@ html {
     text-decoration: none;
     padding: 0 2rem;
     height: 100%;
+    position: relative;
+    /* transition: 0.3s; */
 }
+
+.navbar-links:after {
+    content: "";
+    position: absolute;
+    background-color: #FEFEFE;
+    height: 2px;
+    width: 0;
+    top: 52px;
+    transition: 0.3s;
+}
+
+.navbar-links:hover:after {
+    width: 60%;
+}
+
+/* .navbar-links:hover {
+    background-color: #212020;
+} */
 
 .modal-button {
     display: flex;
@@ -84,11 +106,19 @@ html {
     border: none;
     outline: none;
     background: none;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
 #call-image {
     width: 25px;
-    height: 25px;
+    height: auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#call-image:hover {
+    width: 30px;
 }
 
 .modal {
@@ -126,7 +156,6 @@ html {
 .modal-title {
     font-size: 2rem;
     font-weight: 400;
-    /* background-color: cadetblue; */
 }
 
 .modal-header .close-button {
@@ -179,7 +208,6 @@ html {
 @media screen and (max-width: 960px) {
     .navbar-container {
         display: flex;
-        justify-content: space-between;
         height: 80px;
         z-index: 1;
         width: 100%;
@@ -208,19 +236,24 @@ html {
         z-index: 99;
         height: 38vh;
         font-size: 1.25rem;
-        align-items: baseline;
+        /* align-items:;
         text-align: left;
-        float: left;
+        float: left; */
     }
   
     #navbar-logo {
-        margin-left: 28vw;
-        background-color: cadetblue;
-        justify-content: center;
+        font-size: 1.4rem;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    #call {
-        padding-right: 5%;
+    .modal-button {
+        position: absolute;
+        top: 30px;
+        left: 90%;
+        transform: translate(-50%, -50%);
     }
   
     .navbar-toggle .bar {
@@ -320,7 +353,12 @@ html {
     font-size: 1.25rem;
     padding: 0 0 10px 0;
     text-decoration: underline;
-    /* background-color: cadetblue; */
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    text-decoration: none;
+    font-size: 1.4rem;
 }
 
 .footer-info {
